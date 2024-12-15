@@ -1,0 +1,14 @@
+prefix=g:/ffmpeg
+exec_prefix=${prefix}
+libdir=g:/ffmpeg/lib
+includedir=g:/ffmpeg/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 57.107.100
+Requires: 
+Requires.private: libswresample >= 2.9.100, libavutil >= 55.78.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -lgdi32 -lpsapi -lole32 -lstrmiids -luuid -loleaut32 -lshlwapi -LG:/SDL2-2.0.22/x86_64-w64-mingw32/lib -lmingw32 -lSDL2main -lSDL2 -luser32 -LG:/SDL2-2.0.22/x86_64-w64-mingw32/lib -lmingw32 -lSDL2main -lSDL2 -lws2_32 -liconv -lvfw32 -luser32 -lsecur32 -LG:/SDL2-2.0.22/x86_64-w64-mingw32/lib -lmingw32 -lSDL2main -lSDL2 -lx264 -lm -llzma -lbz2 -lz -lpsapi -ladvapi32 -lshell32 -lole32
+Cflags: -I${includedir}
